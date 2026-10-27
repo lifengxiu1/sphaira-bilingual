@@ -1,0 +1,38 @@
+{
+  "GameTools": [
+    "AmiiboGenerator", "Amiigo", "AmiigoMod", "Amiiswap", "BetterBedrockNX",
+    "CaptureSight", "Checkpoint", "Chocolate-Doom-Launcher", "EdiZonOverlay", "Edizon",
+    "Eevee", "Emulanders", "EventRaidInjector", "FPSLocker", "FixCheat", "Foldery",
+    "GamepadOverlay", "GerenciadorMIL", "Goldleaf", "HOSInputDisplay", "KeyX",
+    "LANHelperTesla", "LumioseShinyStashMap", "MTGLifeCounter", "MiSTerCompanionNX",
+    "MissionControl", "Mod_Manager", "NX-Update-Checker", "Neumann", "OpenHomeNX", "PKSE",
+    "RandPlayNX", "SMM2CourseInjector", "SPSV", "SSBUModManager", "SaltyNX", "SaltyNX-Tool",
+    "SimpleModAlchemist", "SimpleModDownloader", "SimpleModManager", "SkyMM-NX",
+    "Status-Monitor-Overlay", "SuperModysseyLoader", "SwitchLanController",
+    "SwitchPresence-Rewritten", "TKMM-NX", "TomoToolNX", "TotKUnexplored", "TranslateNX",
+    "Turnips", "USBBotbase", "UltimateTrainingModpack", "Untitled", "UpThemAll",
+    "YamaNXTurkishPatcher", "ZeldaSaveEditor", "acnh-manager", "botw-unexplored",
+    "botwsaveeditor", "dOPUS", "emuiibo", "gcdumptool", "hdr-launcher", "hid-mitm-plus",
+    "ipswitch", "jksv", "ldn_mitm", "microNXSaveSync", "nx-locale-switcher", "padmacro",
+    "pkBakeryDonutEditor", "pkDex", "pkHouseLocalPokeBank", "pkTeraRaidMapViewer",
+    "ra-offline", "svitch", "switch-cheats-updater", "switchXBOXcontroller", "sys-clk",
+    "sys-clk-Editor", "sys-clk-Overlay", "sys-hidplus", "syscon1x2024", "yallarenuts"
+  ],
+  "MediaNetwork": [
+    "ASCIIStarWars", "Akira", "AuroraChatforSwitch", "BookReader", "Brewser", "CamNX",
+    "ChatNX", "ComicNX", "CuteManga", "FireplaceNX", "Halyard", "IRSwitch", "LunarNX",
+    "Moonlight-Switch", "MusicPlayer2", "NXBadApple", "NXGallery", "NXMP", "NXMilk",
+    "NXPlazaStreetPass", "NXShare", "NXpotify", "NetSurf", "OpenNOW", "SSBot",
+    "ShareNX-Overlay", "SkyNX", "SpotifySwitchRemote", "StreamFinEX", "SwitchAssistant",
+    "SwitchCast", "SwitchFrameTap", "SwitchWave", "Switchfin", "SysDVR", "TsVitch",
+    "VGMplayerNX", "WookReadercomics", "ZERODROID", "browsenx", "delve", "eBookReaderSwitch",
+    "ebookViewerNX", "ebooks", "in-home-switching", "lennytube", "milkytracker", "moonlight-nx",
+    "nx-midi", "nxTransmission", "nxlaserplayer", "nxplay", "pixel-painter", "pleNx", "pplay",
+    "screen-nx", "sporegram", "switch-remote-play", "switchnewpipe", "sys-screenuploader",
+    "sys-tune", "sysdvr-overlay", "twiNX", "wiliwili"
+  ],
+  "Games": ["Doom", "NXBlood", "NXCGOL", "Sandboxels", "TicTacToeNX", "UMSDPong", "snek", "TetrisOverlay"],
+  "Emulators": ["EasyRPGplayer", "FlashNX", "Kirikiri", "ScratchEverywhere", "Tsukihime", "renpy-switch", "residualvm", "scummvm"],
+  "SystemTools": ["Homebrew_SD_Setup", "HelloColours", "ShoWiFi", "switchident-console", "sys-ftpd"],
+  "Other": ["CalculateNX", "Calculator_NX", "Clock-Time", "FactorNX", "FlashCardsNX", "Kinestop", "LoveStory_Demo", "NXDucoMiner", "TestApp", "TimerNX"]
+}

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.patch whitespace=-blank-at-eol
+*.zip binary
+*.nro binary

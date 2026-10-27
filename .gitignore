@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+upstream/
+libnx/
+newlib/
+dist/
+category-tests
+category-tests.exe
+.DS_Store
+Thumbs.db

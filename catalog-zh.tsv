@@ -1,0 +1,511 @@
+100boxesNX	百格谜题	简单却富有挑战性的益智游戏。
+2048	数字合成	数字合成游戏 2048 的移植版。
+2planes	双飞机	自制游戏 2Planes。
+A-Square-Astray	迷途方块	A Square Astray 的 Switch 移植版。
+AAReboot	快速重启	立即重启进入 Hekate。
+AARebootApplet	快速重启小程序	AA-Reboot 的小程序版本。
+ASCIIStarWars	字符星球大战	播放由 ASCII 字符绘制的《星球大战》影片。
+AXChip8	CHIP-8 模拟器	运行 CHIP-8 程序和游戏。
+Akira	远程串流界面	为 chiaki-ng 提供图形界面。
+AlephOne	马拉松游戏引擎	开源 Marathon 游戏引擎。
+AmiiboGenerator	Amiibo 生成工具	生成 Amiibo 数据。
+Amiigo	Amiibo 管理	Emuiibo 的图形管理界面。
+AmiigoMod	Amiibo 管理改版	Emuiibo 的图形管理界面。
+Amiiswap	Amiibo 管理	图形化 Amiibo 管理工具。
+Apollo	文件浏览器	Switch 文件浏览器。
+Aquaria	安琪拉之歌引擎	开源 Aquaria 的 Switch 移植版。
+ArkanoidNX	打砖块	Arkanoid 打砖块游戏。
+AuroraChatforSwitch	跨平台聊天	跨平台聊天客户端。
+Avatool	账户头像工具	替换 Switch 账户头像。
+BackupNX	云端文件备份	将文件备份到云端。
+Bejeweled-NX	宝石消除	Bejeweled 宝石消除游戏移植版。
+BetterBedrockNX	基岩版工具箱	用于改装 Switch 上 Minecraft 基岩版的工具箱。
+BiggestDump	更新数据导出	导出系统更新数据。
+BlockamokRemix	立体躲方块	躲避方块的 3D 动作游戏。
+BomberManNX	炸弹人游戏	Bomberman 风格游戏。
+Bomberman-SwitchGDX	炸弹人移植版	使用 LibGDX 的 Bomberman 移植版。
+BookReader	离线电子书	离线电子书阅读器。
+BootSoundNX	开机音效模块	启动时播放音效的系统模块。
+BouncyBrawl	弹跳乱斗	将其他玩家撞下舞台。
+Brewser	网页应用启动器	在 Switch 上运行网页应用。
+Brick-Game-9999-in-1	经典掌机小游戏	经典 Brick Game 掌机游戏合集。
+Bricks-NX	方块游戏	简单的方块游戏。
+BrogueCE	地牢探险	简约风格的 Roguelike 地牢游戏。
+ButtonBreakSwitch	按键小游戏	ButtonBreakSwitch 自制游戏。
+CHIP8	CHIP-8 游戏集	CHIP-8 程序与游戏。
+COLDSTART	俯视生存射击	Roguelike 风格的俯视角射击生存游戏。
+CSE2	洞窟物语引擎	《洞窟物语》1.0.0.6 的反编译重实现。
+CalculateNX	计算器	Switch 计算器。
+Calculator_NX	计算器	使用 C++ 编写的计算器。
+CamNX	红外摄像头	使用手柄红外传感器的摄像头工具。
+Cannonball_Switch	赛车游戏引擎	Cannonball 游戏引擎移植版。
+CaptureSight	宝可梦数据查看	查看团体战种子、闪光状态和个体值等宝可梦数据。
+CenaNX	约会模拟游戏	John Cena 主题约会模拟游戏移植版。
+ChatNX	人工智能聊天	支持 AI 聊天、图像生成和图像分析。
+Checkpoint	存档管理	游戏存档管理工具。
+CheezitTheGame	胜负小游戏	只有胜利或失败的自制游戏。
+Chocolate-Doom-Launcher	毁灭战士启动器	管理 Chocolate Doom 的 WAD 文件。
+ChunkIntercept	自制小游戏	小型自制游戏 Chunk Intercept。
+Clanbomber	多人炸弹人	支持多人的 Bomberman 风格游戏。
+ClawSwitch	爪子游戏引擎	OpenClaw 的 Switch 移植版。
+Clock-Time	时钟	显示时间的时钟应用。
+ComicNX	在线漫画浏览	在线漫画浏览器。
+Commander-Keen	指挥官基恩引擎	Commander Keen 游戏解释器。
+Connect-4-Dual-Edition	双重四子棋	带有变化规则的四子棋游戏。
+ConsoleEditor	文本编辑器	用于编辑文本的工具。
+Cpp-Snake-NX	贪吃蛇	贪吃蛇游戏。
+CustomBootScreen	启动画面管理	管理 Switch 和 Hekate 的启动标志图片。
+CustomUI	界面库演示	Plutonium 图形界面库演示程序。
+CuteManga	漫画阅读器	漫画阅读应用。
+DC-uLaunch_Updater	桌面替换管理	安装或移除 uLaunch。
+DDLC	心跳文学部移植	《心跳文学部》的非官方移植版。
+DNS-MITM_Manager	域名规则管理	使用 Tesla 悬浮菜单管理 hosts 域名规则。
+DNSmitmChecker	域名拦截检查	测试 Atmosphère 的 DNS MITM 功能。
+DVDlogo	弹跳标志屏保	显示弹跳 DVD 标志的屏幕保护程序。
+DevilutionX	暗黑破坏神引擎	适配现代系统的 Diablo 游戏引擎。
+DinoRunNX	小恐龙跑酷	Chromium 离线小恐龙游戏移植版。
+DokkaebiHack	动画演示	概念验证动画程序。
+Donut	字符甜甜圈	显示旋转的 ASCII 字符甜甜圈。
+Doom	毁灭战士引擎	Chocolate Doom 游戏引擎。
+Dr-Driller	钻地游戏	Mr. Driller 风格游戏。
+DungeonRush	地牢冲刺	受贪吃蛇启发的游戏。
+EasyRPGplayer	RPG 游戏播放器	运行用户自己的 RPG 游戏。
+EdiZonOverlay	修改码悬浮菜单	通过悬浮菜单切换修改码。
+Edizon	存档与内存工具	EdiZon SE 存档管理、编辑与内存修改工具。
+Eevee	离线宝可梦管理	离线的 Pokémon HOME 替代工具。
+EmuMmcConfig	虚拟系统配置	在系统内管理 Atmosphère emuMMC。
+EmuNand-Swapper	虚拟分区切换	在两个原始 NAND 分区之间切换。
+Emulanders	传送门 NFC 管理	用于 Skylanders NFC 模拟、扫描和转储管理的悬浮工具。
+Enigma	谜题游戏	Enigma 的移植版。
+EventRaidInjector	团体战活动导入	导入往期宝可梦团体战活动。
+Evolution_saved_me_NX	进化救援游戏	Evolution Save Me 的移植版。
+FNFSwitchFunkin	周五夜放克	Friday Night Funkin' 的移植版。
+FNFVSliceNX	周五夜放克新版	FNF V-Slice 0.8.7 移植版；首次启动下载官方游戏文件。
+FPSLocker	帧率设置悬浮工具	为商业游戏设置自定义帧率。
+FactorNX	计算器	Switch 计算器。
+Fake-08	PICO-8 播放器	PICO-8 游戏播放器与模拟器。
+Fifteen-NX	数字华容道	十五格滑块谜题游戏。
+FinalFantasyIV	最终幻想四移植	《最终幻想 IV》3D 重制版的移植版。
+FireplaceNX	像素壁炉	复古像素风格的壁炉画面。
+FixCheat	修改码自动启用修复	关闭修改码的自动启用。
+FizzBuzz_NX	编程演示	使用 C++ 编写的 FizzBuzz 演示程序。
+FlappyBirdNX	飞翔小鸟	Flappy Bird 风格游戏。
+Flare-Switch-port	动作角色扮演	单人 2D 动作角色扮演游戏。
+FlashCardsNX	记忆卡片	用于学习的闪卡应用。
+FlashNX	Flash 播放器	通过 Ruffle 运行 Flash SWF 文件。
+Foldery	模组文件夹工具	为游戏模组创建文件夹。
+FunkinRewritten	周五夜放克重写版	Friday Night Funkin' 的重写实现。
+GameLad	Game Boy 模拟器	Game Boy 游戏模拟器。
+GamepadOverlay	手柄输入悬浮显示	以悬浮层显示手柄输入。
+GerenciadorMIL	游戏译文管理	下载游戏翻译补丁的工具。
+GirlsAreWeirdNX	少女奇遇移植	Girls are Weird 的非官方移植版。
+Goldleaf	内容与安装管理	软件内容安装与管理工具。
+GuitarNX	吉他节奏游戏	类似 Guitar Hero 的节奏游戏。
+HCL-switch	迷宫游戏移植	Hydra Castle Labyrinth 的移植版。
+HOSInputDisplay	系统按键显示	显示控制器输入的系统模块。
+Halyard	云电脑客户端	Shadow 云电脑服务的非官方客户端。
+Hamsters	仓鼠养成	仓鼠繁育养成游戏。
+Hekate	启动引导菜单	CTCaer 维护的启动引导工具。
+HekateBrew	引导菜单助手	与 Hekate 配合使用的 Switch 自制应用。
+HelloColours	彩色测试	快速测试 Switch 的应用程序。
+HomeBrew-Manager	自制应用管理	简单的自制应用管理工具。
+Homebrew-Details	自制应用详情管理	自制应用管理器。
+Homebrew_SD_Setup	SD 卡配置助手	面向 SDSetup 的 Switch 自制应用。
+HuntfortheShadowRider	追寻暗影骑士	Hunt for the Shadow Rider 的 Godot 移植版。
+Hurrican	飓风动作游戏	Hurrican 的 Switch 移植版。
+IRSwitch	红外画面查看	显示 Switch 红外摄像头画面。
+InternalSpeakers	底座内置扬声器	在底座模式下使用主机内置扬声器。
+InvadersNX	太空入侵者	太空入侵者风格游戏。
+J2MENXX	Java 手机模拟器	Switch 上的 J2ME 模拟器。
+JC-color-swapper	手柄颜色修改	修改 Joy-Con 报告的颜色。
+JCToolbox	手柄工具箱	Joy-Con 工具箱。
+JewelThief	宝石大盗	九十年代经典游戏 Jewel Thief 的重制版。
+JoyConMouse	手柄鼠标演示	使用 SDL2 实现的鼠标光标概念验证程序。
+JoyVibe	手柄振动控制	控制 Joy-Con 的振动。
+Kartswitch	卡丁车赛车	SRB2 Kart 的移植版。
+Kens-Labyrinth	肯的迷宫	Ken's Labyrinth 的移植版。
+KeyX	按键映射与宏	提供连发、按键重映射和宏功能。
+Kinestop	晕车缓解悬浮层	用于缓解乘车晕动不适的悬浮层。
+KipSelect	系统模块管理	Atmosphère 的工具箱与 KIP 模块管理器。
+Kirikiri	吉里吉里演示	Kirikiri 引擎的 Switch 演示版。
+Klooni1010	方块拼图	使用 LibGDX 编写、基于 1010! 的拼图游戏。
+LANHelperTesla	局域网联机助手	为自定义固件用户生成 LAN Play 与 XLink Kai IP 配置。
+LaDeuda	债务游戏	以行为后果为主题的游戏。
+LoveStory_Demo	视觉小说演示	基于 LovePotion 的视觉小说库演示版。
+Lugaru	忍者兔格斗	忍者兔主题的格斗游戏。
+LumioseShinyStashMap	闪光宝可梦实时地图	《宝可梦传说 Z-A》闪光宝可梦位置实时地图。
+LunarNX	主机远程串流	Xbox 与 PlayStation 串流客户端。
+MAME-NX	街机模拟器	适用于 Switch 的 MAME 0.72。
+MTGLifeCounter	万智牌生命计数	万智牌 EDH 模式生命值计数器。
+MarioBrosNX	超级马里奥风格游戏	用 C++ 和 SDL2 编写的 FC 超级马里奥兄弟风格游戏。
+MazeNX	惊吓迷宫	Scary Maze Game 风格游戏。
+McOsu-NX	音游练习客户端	非官方 osu! 自定义练习客户端。
+MegaZeux	游戏制作系统	MegaZeux 游戏创作系统。
+MenuMusicNX	主页背景音乐	为 Switch 主页提供背景音乐。
+MethaneBros	超级甲烷兄弟	Super Methane Bros 的重制版。
+MiSTerCompanionNX	MiSTer 配套工具	用于 Switch 的 MiSTer Companion。
+MiiPort	Mii 导入导出	导入与导出 Mii 角色。
+MiiPortOnline	在线 Mii 导入	下载 Mii 并导入 Switch。
+Minesweeper	扫雷	Switch 扫雷游戏。
+MinesweeperNX	扫雷游戏	扫雷游戏。
+MissionControl	蓝牙手柄兼容	使用其他游戏主机的控制器。
+Mod_Manager	模组管理	管理 LayeredFS 的 mods 文件夹。
+Moonlight-Switch	电脑游戏串流	Moonlight 的 Switch 移植版。
+MusicPlayer2	音乐与歌词播放	支持同步歌词、内嵌封面和在线歌词下载的音乐播放器。
+N-Xplorer	多功能文件管理	多功能文件管理器。
+NX-Update-Checker	内容更新检查	检查软件内容的更新。
+NX-ntpc	网络时间同步	Switch 的 NTP 网络时间客户端。
+NX-shell	文件管理	文件管理器。
+NXBadApple	黑白动画播放	在 Switch 上播放 Bad Apple 动画。
+NXBlood	血祭游戏引擎	NBlood 的 Switch 移植版。
+NXCGOL	生命游戏模拟	在 Switch 上运行康威生命游戏。
+NXDucoMiner	DUCO 挖矿演示	Switch 上的多线程 DUCO 挖矿程序。
+NXFetchRem	系统信息展示	带有自定义模块的 NX-Fetch。
+NXGallery	相册远程查看	从手机或电脑查看 Switch 相册。
+NXMP	视频播放器	Switch 视频播放器。
+NXMilk	音乐可视化播放	支持 projectM 可视化效果的音频播放器。
+NXPlazaStreetPass	在线擦肩交流	为 Switch 提供在线 StreetPass 交流系统。
+NXRemoteLauncher	远程游戏启动	远程启动 Switch 游戏。
+NXSAND	落沙沙盒	使用 GPU 的落沙沙盒模拟。
+NXShare	浏览器访问相册	通过网页浏览器访问 Switch 相册。
+NXSimpleDownloader	文件下载器	简单的文件下载工具。
+NXoodles	连线益智游戏	Noodles! 风格的 Switch 游戏。
+NXpotify	Spotify 连接客户端	Switch 上的 Spotify Connect 客户端。
+NXthemes_Installer	主题安装器	安装 Switch 主题。
+NaziZombiesPortable	僵尸生存游戏	在 Quake 引擎上重现 Call of Duty: Zombies 风格玩法。
+NetSurf	轻量网页浏览器	小型网页浏览器。
+Neumann	存档备份还原	游戏存档备份与恢复工具。
+NooDS	任天堂 DS 模拟器	任天堂 DS 模拟器。
+ONScripterNX	视觉小说引擎	ONScripter 视觉小说引擎。
+Odamex	毁灭战士多人版	经典 Doom 的多人游戏移植版。
+OpenArenaNX	开放竞技场	OpenArena 的移植版。
+OpenHomeNX	宝可梦综合管理	提供游戏封面、跨世代宝可梦银行、交换进化、跨设备存档同步与背包编辑。
+OpenJazzNX	爵士兔游戏引擎	支持 SDL2 的 OpenJazz Switch 移植版。
+OpenNOW	GeForce NOW 云游戏	Switch 上的 GeForce NOW 客户端。
+OpenSupaplex	滚屏益智游戏	经典的滚屏方格益智游戏。
+OpenTTD	运输大亨模拟	Transport Tycoon Deluxe 运输经营模拟游戏。
+Openlara	古墓丽影开源引擎	经典 Tomb Raider 的开源游戏引擎。
+PKSE	宝可梦存档编辑	开源宝可梦存档编辑器。
+PacManNX	吃豆人	Pac-Man 风格游戏。
+Pacpac	吃豆人风格游戏	PacPac 游戏的分支版本。
+ParticleFire-NX	粒子火焰演示	particlefire-revision 的概念验证移植版。
+Payload-Launcher-Apple	引导载荷启动	重启进入 SD 卡上的载荷。
+Payload_launcher	重启载荷启动器	通过重启载荷机制启动引导载荷。
+PctlManager	家长控制管理	无需手机应用即可管理家长控制。
+PepperandCarrot	小女巫跑酷	以 Pepper & Carrot 为主题的无尽跑酷游戏。
+Pickr	方格益智游戏	Pickr3DS 的移植版。
+PixelWheels	像素赛车	俯视视角的复古赛车游戏。
+Pixel_Shuffle_NX	像素拼图	益智拼图游戏。
+PlayGuard	离线家长控制	离线家长控制与游玩活动管理。
+PongNX	乒乓球游戏	Pong 的 Switch 版本。
+PowertoolsNX	电源工具	重启或关闭 Switch。
+Q3ArenaNX	雷神之锤三竞技场	Quake III Arena 的移植版。
+QuakespasmNX	雷神之锤引擎	Quakespasm 的移植版。
+QuickNTP	网络校时悬浮工具	通过 NTP 服务器同步时间的 Tesla 插件。
+RCMReboot	重启进入 RCM	重启进入 RCM 模式。
+RCMRebootInstant	快速进入 RCM	立即重启进入 RCM 模式。
+REDRIVER2	狂飙二移植	Driver 2 的 Switch 移植版。
+REminiscence	闪回游戏引擎	用于 Flashback 的 REminiscence 引擎。
+RandPlayNX	随机游戏启动	随机选择并启动一个游戏。
+Reset-Parental-Controls-NX	家长控制密码重置	重置家长控制的 PIN 码。
+RetroNX	多机种模拟器合集	将多种 RetroArch 模拟器整合到一个应用中。
+RingRacers	环形卡丁车赛	注重驾驶技巧的卡丁车赛车游戏。
+SDLPoP	波斯王子开源移植	使用 SDL 的开源 Prince of Persia 重实现。
+SMM2CourseInjector	马里奥制造二关卡导入	为 Super Mario Maker 2 导入关卡。
+SPSV	游玩时长查看	显示所有已安装应用的游玩时间。
+SRB2Kart	经典风格卡丁车	经典风格的卡丁车赛车游戏。
+SSBUModManager	大乱斗模组管理	用于 Switch《任天堂明星大乱斗 特别版》的简单模组管理器。
+SSBot	截图发送工具	将 Switch 截图发送到 Telegram。
+SaltyNX	运行时代码模块	为 Switch 提供文件与代码修改的后台模块。
+SaltyNX-Tool	运行时模块管理	管理 SaltyNX 的功能。
+Sandboxels	像素沙盒	体素沙盒游戏。
+ScratchEverywhere	Scratch 游戏播放器	在 Switch 上运行 Scratch 游戏。
+ScreenTester	屏幕测试	屏幕测试应用。
+SealedBite	封印之咬移植	Sealed Bite 的 Godot 移植版。
+Serious-Engine-TFE	英雄萨姆首次遭遇引擎	icculus 维护的 Serious Engine 分支移植版，用于 The First Encounter。
+Serious-Engine-TSE	英雄萨姆再次遭遇引擎	icculus 维护的 Serious Engine 分支移植版，用于 The Second Encounter。
+ShareNX-Overlay	分享悬浮工具	ShareNX 的 Switch 悬浮工具版本。
+Shasciw	双人自制游戏	供两名玩家游玩的 Switch 自制游戏。
+Shiromino	俄罗斯方块大师风格	Tetris Grand Master 风格游戏的 Switch 移植版。
+ShoWiFi	无线网络信息	显示当前 Wi-Fi 网络信息。
+SimonNX	记忆游戏	考验记忆力的游戏。
+SimpleModAlchemist	快速模组管理	快速管理游戏模组。
+SimpleModDownloader	模组下载器	为 Switch 下载游戏模组。
+SimpleModManager	简单模组管理	简单的游戏模组管理器。
+SkyMM-NX	天际模组管理	用于 Skyrim 的简单模组管理器。
+SkyNX	电脑游戏串流	将电脑游戏画面串流到 Switch。
+SlayTheSwitch	卡牌构筑冒险	Switch 上的 Roguelike 卡牌构筑游戏。
+Slinks-Adventure	斯林克冒险	小型平台跳跃游戏。
+SlitherlinkNX	数回逻辑谜题	自制逻辑益智游戏。
+Snake	贪吃蛇	经典贪吃蛇游戏。
+SnakeNX	经典贪吃蛇	经典贪吃蛇游戏。
+Sonic-CD	索尼克 CD 引擎	Sonic CD 2011 版本的完整反编译重实现。
+Sonic3-AIR	索尼克三重制引擎	Sonic 3 & Knuckles 的重制实现。
+SpaceVue	存储空间仪表盘	现代风格的存储空间查看界面。
+SpotifySwitchRemote	Spotify 遥控器	控制 Spotify 的音乐播放。
+Status-Monitor-Overlay	硬件状态监控	以悬浮层显示 Switch 的多项硬件状态。
+StreamFinEX	Stremio 媒体客户端	用于自制系统 Switch 的 Stremio 客户端。
+SuDokuL	数独	使用 SDL2 编写的数独游戏。
+SudokuNX	数独游戏	Switch 数独游戏。
+Super-Haxagon	六边形挑战	Super Hexagon 风格游戏。
+SuperModysseyLoader	马里奥奥德赛模组安装	便捷安装 Super Mario Odyssey 的模组。
+SuperSquatSim	深蹲模拟	Super Squat Sim 游戏。
+SuperTuxMilestone1	超级企鹅	从电脑移植的 Super Mario 风格平台游戏。
+SwitchAssistant	智能家居连接器	通过 MQTT 连接 Home Assistant。
+SwitchCast	屏幕投送	将屏幕投送到 Chromecast。
+SwitchFTPClient	FTP 客户端	简单的 Switch FTP 客户端。
+SwitchFishingDemo	网页钓鱼演示版	Webfishing 在 itch.io 发布的演示版移植。
+SwitchFrameTap	高清画面串流	将游戏画面以 1080p60 串流到电脑。
+SwitchHero	节奏游戏	Switch 上的节奏游戏。
+SwitchInfoNX	系统信息工具	查看系统信息的综合工具。
+SwitchLanController	无线局域网手柄	将 Switch 用作无线局域网控制器。
+SwitchNotificationLED	通知灯控制	控制通知 LED 的自制应用。
+SwitchP8	PICO-8 模拟器	Switch 上的 PICO-8 模拟器。
+SwitchPresence-Rewritten	Discord 游玩状态	在 Discord 中显示 Switch 的丰富游玩状态。
+SwitchSlide	计算尺	Switch 上的计算尺工具。
+SwitchVerifier	主机持有验证	验证自己持有实体 Switch。
+SwitchWave	硬件加速媒体播放	支持硬件加速的媒体播放器。
+Switch_90DNS_Tester	域名屏蔽测试	在 Switch 上测试 90DNS 配置。
+Switchfin	Jellyfin 媒体客户端	Switch 上的 Jellyfin 客户端。
+SysDVR	电脑采集画面	通过网络将 Switch 游戏画面采集到电脑。
+SystemShock	网络奇兵引擎	使用 Shockolate 引擎重现经典 System Shock。
+T-Rekt-NX	自制游戏移植	T-Rekt 的 Switch 移植版。
+TIL-NX	自制游戏移植	TIL 游戏的 Switch 版本。
+TKMM-NX	王国之泪模组管理	Tears of the Kingdom 模组管理器。
+Taisei	东方风格弹幕游戏	受东方 Project 启发的同人游戏。
+TamatoolNX	电子宠物模拟器	Tamagotchi P1 模拟器。
+TegraExplorer	引导环境文件管理	在引导载荷环境中运行的 Switch 文件管理器。
+Tesla-menu	悬浮菜单	Switch 悬浮工具菜单。
+TestApp	测试程序	用于测试的应用。
+TetrisNX	俄罗斯方块	俄罗斯方块风格的 Switch 游戏。
+TetrisOverlay	俄罗斯方块悬浮游戏	在悬浮层中游玩俄罗斯方块。
+ThemezerNX	主题下载器	Switch 主题下载工具。
+TicTacToeNX	井字棋	井字棋游戏。
+TimerNX	倒计时器	Switch 倒计时工具。
+TomoToolNX	朋友聚会工具	直接在 Switch 上使用的 Tomodachi Life 工具集。
+TotKUnexplored	王国之泪收集查看	查看 Tears of the Kingdom 中尚未找到的收集物。
+TranslateNX	游戏实时翻译	实时翻译游戏内容。
+TriPeaks	三峰纸牌	简单的三峰单人纸牌游戏。
+Triplane_Turmoil	横版空战	横向卷轴空中缠斗游戏。
+Trogdor-Reburninated	乡村喷火游戏	扮演 Trogdor 喷火焚烧乡村。
+TsVitch	电视播放	在 Switch 上观看电视。
+Tsukihime	月姬引擎	用于视觉小说的 ONScripter 引擎。
+Turnips	大头菜价格预测	预览大头菜价格。
+UMSDPong	乒乓球小游戏	Pong 乒乓球游戏。
+USBBotbase	远程控制模块	通过 Wi-Fi 控制 Switch。
+UltimateTrainingModpack	大乱斗训练增强	增强《任天堂明星大乱斗 特别版》的训练模式。
+UltrahandOverlay	自定义命令悬浮工具	可定制的悬浮执行工具。
+Unlucky	随机角色扮演	围绕随机数机制设计的角色扮演游戏。
+Untitled	批量软件卸载	批量卸载软件内容。
+UpThemAll	游戏更新管理	更新 Switch 游戏的工具。
+VBA_NEXT	掌机模拟器	VBA Next 模拟器。
+VGMplayerNX	游戏音乐播放器	开发中的 Switch VGM 音乐播放器。
+Vanilla-Conquer	命令与征服引擎	Vanilla Conquer 的 Switch 移植版。
+Vapor_spec	游戏系统移植	Vapor Spec 的 Switch 移植版。
+VoyagerNX	星际迷航竞技游戏	Star Trek Voyager: Elite Force Holomatch 的移植版。
+WarnelChawpiovs	单人合作纸牌	支持单人与合作的纸牌游戏。
+Whats-in-the-box-NX	盒子里是什么	What's in the Box 的 Switch 移植版。
+Wolf4SDL-Switch	德军总部三维引擎	Wolfenstein 3D 的移植版。
+WookReadercomics	漫画阅读	在 Switch 上阅读漫画。
+YamaNXTurkishPatcher	土耳其语补丁工具	用于游戏土耳其语本地化的工具。
+ZERODROID	Boosteroid 云游戏	面向 Switch 自制系统的非官方 Boosteroid 客户端。
+ZeldaSaveEditor	塞尔达存档编辑	支持 Breath of the Wild，并实验性支持 Tears of the Kingdom 的存档编辑器。
+abuse	横版射击移植	Abuse SDL 的 Switch 移植版。
+acnh-manager	游戏代理配套管理	Game Agent 配套的 Switch 游戏安装与管理工具。
+appstore	自制软件商店	下载和管理自制应用。
+appstore_survey	商店用户调查	HB App Store 用户反馈调查。
+argon-nx	图形载荷选择器	图形界面的引导载荷链式启动器。
+avp	异形大战铁血战士移植	Alien vs. Predator Gold 的移植版。
+bbloc	文本与代码编辑	文本及代码编辑器。
+bean-controller-checker	手柄按键检测	测试 Switch 控制器按键。
+bean-stick-checker	摇杆检测	检查摇杆位置的自制工具。
+bitmap-printer	位图打印工具	bitmap-printer 位图打印程序。
+blobby	沙滩排球游戏	Blobby Volley 2 的 Switch 移植版。
+botw-unexplored	旷野之息收集查看	查看 Breath of the Wild 中未找到的呀哈哈与神庙。
+botwsaveeditor	旷野之息存档编辑	Breath of the Wild 存档图形编辑器。
+brainfuck	语言解释器	Brainfuck 编程语言解释器。
+brewjsexamples	JavaScript 示例	Brew.js 的 JavaScript 示例程序。
+browsenx	系统浏览器启动	无需配置 DNS 即可启动系统浏览器。
+bs	百慕大综合征引擎	Bermuda Syndrome 游戏引擎重实现。
+cannonball	超越赛车引擎	移植到 Switch 的 OutRun 游戏引擎。
+d1x-switch	天旋地转一引擎	Descent 的源码移植版。
+d2x-switch	天旋地转二引擎	Descent 系列的源码移植版。
+dOPUS	软件包管理	Switch 的 NSP 与 XCI 管理器。
+delve	Gopher 终端客户端	简单的终端式 Gopher 客户端。
+desmume	任天堂 DS 模拟器	运行 DS 游戏，游戏目录为 sd:/switch/desmume/roms。
+devilution-nx	暗黑破坏神移植	Diablo 的 Switch 移植版。
+dhewm3	毁灭战士三引擎	dhewm3 游戏引擎的移植版。
+doom64	毁灭战士六十四引擎	DOOM 64 的重实现。
+dxxrebirth	天旋地转开源引擎	Descent 1 与 2 的开源游戏引擎。
+eBookReaderSwitch	电子书与 PDF 阅读	电子书和 PDF 阅读器。
+easypower	快捷重启	快速重启 Switch 的工具。
+ebookViewerNX	电子书阅读	电子书阅读器。
+ebooks	公版电子书合集	包含 62 本知名公版电子书。
+eduke32	毁灭公爵三维引擎	Duke Nukem 3D 游戏引擎。
+emuiibo	Amiibo 模拟模块	通过 NFP 服务中间层实现 Amiibo 模拟。
+emummc-toggle	虚拟系统开关	emuMMC 开关工具。
+emummc-toggler	虚拟系统启用切换	直接在 Switch 上切换 emuMMC 启用状态。
+ezRemoteClient	远程文件管理	支持 FTP、SMB 和 WebDAV 的远程文件管理器。
+f2bgl	黑暗之心游戏引擎	Fade to Black 游戏引擎。
+fastCFWswitch	系统引导快捷切换	通过悬浮工具重启进入载荷。
+fceumm	红白机模拟器核心	RetroArch 的 NES 模拟器核心。
+femulti	火焰纹章多人版	Fire Emblem 多人游戏项目。
+fheroes2	英雄无敌二引擎	开源 Heroes of Might and Magic II 游戏引擎。
+flavortown	SDL 演示	使用 SDL 编写的简单演示程序。
+ftpd	FTP 文件服务器	Switch 上的 FTP 服务器。
+ftpsrv	轻量 FTP 服务器	小巧快速的 FTP 服务器。
+gagorder	更新提示修补	修补 SuperNag 更新提示。
+gambatte	彩色掌机模拟器核心	RetroArch 的 Game Boy Color 模拟器核心。
+game-example	游戏示例	开发中的游戏示例。
+gcdumptool	游戏数据导出	Switch 游戏转储工具。
+gdkgba	GBA 模拟器旧版	已停止维护的 GBA 模拟器。
+gearboy	Game Boy 模拟器核心	RetroArch 的 Game Boy 模拟器核心。
+genesisgx	世嘉模拟器核心	RetroArch 的 SEGA 模拟器核心。
+gol	生命游戏模拟	Switch 上的康威生命游戏。
+gzdoom	毁灭战士增强引擎	在 ZDoom 源码移植版基础上加入 OpenGL 渲染。
+hbmenu	自制应用菜单	加载和运行其他自制应用。
+hdr-launcher	HDR 项目启动器	安装、更新和启动 HDR。
+hexgem	宝石益智游戏	益智游戏 Hexgem。
+hid-mitm-plus	网络手柄输入	通过网络使用游戏手柄。
+hode	黑暗之心引擎	Heart of Darkness 游戏引擎。
+hot_pocolate	触觉交互演示	触觉交互娱乐程序。
+hota	异形之心移植	Heart of the Alien 游戏。
+in-home-switching	电脑画面串流	将 Windows 画面串流到 Switch。
+ioquake3nx	雷神之锤三引擎	面向 Switch 系统 12.x 的 ioQuake 3 Arena 移植版。
+ipswitch	IPS 补丁生成	通过文本生成供 Atmosphère 使用的 .ips 补丁。
+jaguar	雅达利 Jaguar 模拟器	Virtual Jaguar 模拟器。
+jellycar	果冻赛车	JellyCar 的 Switch 移植版。
+jksv	存档管理	游戏存档管理工具。
+julius	凯撒大帝三引擎	基于 devnoname120 的 Vita 版本移植的 Caesar 3 引擎。
+jumpnbump	多人跳跃对战	简单且富有趣味的多人游戏。
+kEx	全系统文件浏览	可浏览完整系统的文件管理器。
+kgdoom	毁灭战士 Lua 版本	支持 Lua 的 Doom 移植版。
+khedgb	彩色掌机模拟器	Game Boy Color 模拟器。
+laines	红白机模拟器	Switch 上的 NES 模拟器。
+ldn_mitm	本地联机转接模块	由 fs_mitm 修改而来的联机中间层 KIP 模块。
+lennytube	YouTube 客户端	在 Switch 上观看 YouTube。
+libtransistor-examples	开发库测试示例	用于测试 libtransistor 的 NRO 程序。
+liero	蠕虫对战游戏	Liero 的移植版。
+mGBA	GBA 模拟器	Game Boy Advance 模拟器。
+mame2000	街机模拟器核心	RetroArch 的 MAME 2000 街机模拟器核心。
+mame2003	街机模拟器核心	RetroArch 的 MAME 2003 模拟器核心。
+manaplus	在线角色扮演客户端	Mana Plus 游戏客户端。
+max_nx	马克思佩恩移动版	Max Payne 的便携版本。
+mcpserver	MCP 服务端	在 Switch 上运行的 MCP 服务器。
+melonDS	任天堂 DS 模拟器	任天堂 DS 模拟器。
+memory-game-NX	记忆配对游戏	考验记忆力的游戏。
+meritous	俯视地牢游戏	俯视视角的地牢游戏。
+microNXSaveSync	跨设备存档同步	在多台设备间同步存档数据。
+milkytracker	模块音乐制作	兼容 FT2 的 Tracker 音乐制作工具。
+minesweeper-NX	扫雷	扫雷游戏。
+mirrormagic	镜面反射谜题	沿袭 Deflektor 与 Mindbender 风格的游戏。
+moonlight-nx	电脑远程串流	面向 Horizon OS 的 Moonlight 移植版。
+mtp-server-nx	USB 文件传输	Switch 上的 MTP 文件传输服务器。
+nOmooRe	时光房间游戏	房间保持不变、时间却不断变化的游戏。
+nXDownload	SD 卡文件下载	直接向 SD 卡下载文件。
+neopop_SDL	NEOGEO 掌机模拟器	Neo Geo Pocket 与 Neo Geo Pocket Color 模拟器。
+noies	红白机模拟器	NES 模拟器。
+noled	息屏悬浮工具	用于关闭 Switch 屏幕显示的悬浮工具。
+nso-icon-tool	会员图标头像制作	使用 NSO 图标创建自定义头像。
+nx-locale-switcher	软件区域设置	为指定 Switch 软件切换区域与语言设置。
+nx-midi	MIDI 播放器	在 Switch 上播放 MIDI 文件。
+nx-ovlloader	悬浮工具加载模块	用于加载 Switch OVL 悬浮工具的后台进程。
+nx-vr	虚拟现实演示	Switch 自制程序的 VR 概念验证测试。
+nx-vvvvvv	重力跳跃游戏	VVVVVV 的移植版。
+nxTransmission	下载客户端	Transmission 的非官方自制移植版。
+nxengine	洞窟物语引擎	Cave Story 的移植实现。
+nxlaserplayer	光盘播放器	用于 Switch 的光盘播放工具。
+nxplay	媒体播放器	媒体播放应用。
+nxquake	雷神之锤引擎	TyrQuake 的移植版。
+nxquake2	雷神之锤二引擎	Yamagi Quake II 客户端的移植版。
+nxsh	远程命令终端	通过 Telnet 使用的 BusyBox 风格 Switch 远程终端。
+nxsysinfo	系统信息查看	系统信息查看器。
+openbor	二维格斗游戏引擎	OpenBOR 二维游戏引擎。
+openfodder	炮灰游戏引擎	Cannon Fodder 的开源移植版。
+openmw	晨风开源引擎	OpenMW 的非官方 Switch 移植版。
+openrct2	过山车大亨二引擎	OpenRCT2 的移植版。
+ovlSysmodule	系统模块悬浮管理	用于 Tesla 的系统模块选择器。
+pFBA	街机模拟器	Final Burn Alpha 系列街机模拟器。
+pNES	红白机模拟器	便携 NES 模拟器。
+padmacro	手柄宏录制回放	录制和回放控制器宏。
+pal	仙剑奇侠传引擎	Legend of Sword and Fairy 的移植版。
+picodrive	世嘉模拟器核心	RetroArch 的 SEGA 模拟器核心。
+pinballnx	弹珠台	Switch 弹珠台游戏。
+pixel-painter	像素绘画	创作彩色像素画。
+pkBakeryDonutEditor	宝可梦甜甜圈编辑	编辑《宝可梦传说 Z-A》存档中的甜甜圈。
+pkDex	离线宝可梦图鉴	面向 Switch 宝可梦游戏的离线图鉴。
+pkHouseLocalPokeBank	本地宝可梦银行	用于宝可梦游戏的本地银行系统。
+pkTeraRaidMapViewer	太晶团体战地图	查看《宝可梦 朱／紫》的太晶团体战详情。
+pleNx	Plex 媒体客户端	原生 Plex 客户端，支持浏览和串流媒体。
+pong	乒乓球游戏	Pong 乒乓球游戏。
+postal	喋血街头移植	Postal 游戏。
+powder-nx	多元素物理沙盒	包含多种元素的物理沙盒游戏。
+pplay	视频播放	Switch 视频播放器。
+ppsspp	PSP 模拟器	PPSSPP 的 Switch 独立版本。
+prodinfoenabler	主机信息写入开关	开启或关闭 PRODINFO 分区写入。
+psnes	超级任天堂模拟器	Snes9x 的移植版。
+pusha	按键连击游戏	尽可能快地按下 A 键。
+pynx	Python 运行环境	在 Switch 上运行 Python。
+ra-offline	离线成就同步模块	离线记录 RetroAchievements 成就，Wi-Fi 恢复后自动同步。
+rawgl	另一个世界引擎	Another World 游戏。
+reboottopayloadswitch	重启进入载荷	通过自制菜单启动引导载荷文件。
+renpy-switch	视觉小说引擎	Ren'Py 的开源 Switch 移植版。
+residualvm	三维冒险游戏解释器	3D 游戏解释器。
+rocksndiamonds	岩石与钻石	Holger Schemel 制作的 Boulder Dash 风格游戏。
+sLaunch	自定义主页	替代主页启动界面。
+screen-nx	截图上传	直接从 Switch 上传截图。
+scummvm	经典冒险游戏引擎	运行点击式冒险游戏。
+sdl_pong	乒乓球小游戏	使用 SDL 的 Pong 游戏。
+snek	贪吃蛇悬浮游戏	Tesla 菜单中的贪吃蛇悬浮游戏。
+snes9x_2010	超级任天堂模拟器核心	RetroArch 的 SNES 模拟器核心。
+snes9x_2010_nx	超级任天堂模拟器核心	RetroArch 的 SNES 模拟器核心。
+solarus	塞尔达同人冒险	爱好者制作的 Legend of Zelda 风格游戏。
+sonicroboblast2	索尼克机器人爆破二	Sonic Robo Blast 2 的移植版。
+spacenx	太空射击	在太空中射击岩石等目标。
+sphaira	自制菜单与商店	自制应用菜单 hbmenu 的替代应用。
+sporegram	Telegram 客户端	Switch 上的非官方 Telegram 客户端。
+stepmania-nx	舞步节奏游戏	StepMania 5.x 的 Switch 移植版。
+supermariowar-nx	超级马里奥对战	Super Mario War 的移植版。
+svitch	存档文件导出	存档文件提取工具。
+switch-cheats-updater	修改码更新	更新游戏修改码文件。
+switch-pl	系统波兰语翻译	Switch 系统的波兰语完整翻译。
+switch-remote-play	电脑游戏远程游玩	使用 Switch 远程游玩电脑游戏。
+switch-smb-client	局域网共享客户端	通过 SMB 在 Switch 与 Windows、Linux 或 NAS 的共享文件夹间传输文件。
+switch-time	系统网络时钟修改	修改 NetworkSystemClock 网络系统时钟。
+switchXBOXcontroller	电脑手柄模拟	将 Switch 用作 Xbox 360 控制器。
+switchident-GUI	主机信息图形查看	查看主机信息的图形工具。
+switchident-console	主机信息终端查看	查看主机信息的终端工具。
+switchnewpipe	NewPipe 视频客户端	NewPipe 的 Switch 移植版。
+switchstrobe	基础图形演示	在 switchbrew 的 simplegfx 示例上做的简单修改。
+sys-clk	按应用调整频率	按应用为 Switch 设置超频或降频。
+sys-clk-Editor	频率配置编辑	编辑 sys-clk 的配置。
+sys-clk-Overlay	频率调整悬浮菜单	通过 ovl-loader 悬浮工具编辑 sys-clk 配置。
+sys-ftpd	后台 FTP 服务器	作为系统模块运行的 FTP 服务器。
+sys-ftpd-light	轻量后台 FTP	原版 sys-ftpd 的重制版本。
+sys-hidplus	网络控制器输入	允许通过网络发送控制器输入。
+sys-http	HTTP 通信模块	通过 HTTP 与 Switch 通信。
+sys-screenuploader	后台截图上传	截图上传系统模块。
+sys-tune	后台音乐播放	后台音频播放器。
+syscon1x2024	有线手柄兼容	支持 Xbox、PlayStation 和电脑控制器。
+sysdvr-overlay	画面采集模式悬浮管理	检查并切换 SysDVR 当前模式的悬浮工具。
+taisei	东方同人弹幕游戏	免费开源的东方 Project 同人游戏。
+test-pkg	测试软件包	用于测试的软件包。
+tetrisswitch	俄罗斯方块	Switch 俄罗斯方块游戏。
+tictactoe	井字棋	井字棋游戏。
+touch-screen	触摸屏演示	触摸屏演示程序。
+twiNX	Twitch 直播客户端	Switch 上的 Twitch 客户端。
+uLaunch	开源自定义主页	自定义的开源 Home 菜单。
+uae4all2	Amiga 模拟器	经过速度优化的 Amiga 模拟器。
+useless	文字与按键演示	显示文字和按钮的自制程序。
+vba-next	掌机模拟器核心	RetroArch 的 Game Boy 系列模拟器核心。
+vgedit	文本编辑	Switch 文本编辑器。
+wae	图片显示示例	显示图片的示例程序。
+wiiero	蠕虫对战移植	Wiiero 的移植版，即 Wii 平台的 Liero 风格游戏。
+wiliwili	哔哩哔哩客户端	Bilibili 视频客户端。
+xash3d-switch	半衰期系列引擎	Xash3D FWGS 游戏引擎。
+xash3d-switch-decay	半衰期衰变引擎	用于 Decay 的 Xash3D FWGS 游戏引擎。
+xash3d-switch-dmc	死亡竞赛经典引擎	用于 DMC 的 Xash3D FWGS 游戏引擎。
+xash3d-switch_Blue_Shift	半衰期蓝色行动引擎	用于 Blue Shift 的 Xash3D FWGS 游戏引擎。
+xash3d-switch_Opposing_Force	半衰期针锋相对引擎	用于 Opposing Force 的 Xash3D FWGS 游戏引擎。
+xrick	瑞克冒险移植	xrick 的 Switch 移植版。
+yallarenuts	存档工具	存档管理工具。

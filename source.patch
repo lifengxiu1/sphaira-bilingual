@@ -1,0 +1,475 @@
+--- a/sphaira/include/nro.hpp
++++ b/sphaira/include/nro.hpp
+@@ -7,6 +7,7 @@
+ #include <optional>
+ #include "fs.hpp"
+ #include "utils/core.hpp"
++#include "app_category.hpp"
+ 
+ namespace sphaira {
+ 
+@@ -30,6 +31,8 @@
+     fs::FsPath path{};
+     s64 size{};
+     MiniNacp nacp{};
++    std::string display_name{};
++    category::Type app_category{category::Other};
+ 
+     u64 icon_size{};
+     u64 icon_offset{};
+@@ -44,6 +47,10 @@
+ 
+     auto GetName() const -> const char* {
+         return nacp.lang.name;
++    }
++
++    auto GetDisplayName() const -> const char* {
++        return display_name.empty() ? GetName() : display_name.c_str();
+     }
+ 
+     auto GetAuthor() const -> const char* {
+--- a/sphaira/source/nro.cpp
++++ b/sphaira/source/nro.cpp
+@@ -5,6 +5,7 @@
+ #include "app.hpp"
+ #include "log.hpp"
+ #include "owo.hpp"
++#include "i18n.hpp"
+ 
+ #include <switch.h>
+ #include <vector>
+@@ -69,6 +70,10 @@
+         entry.icon_offset = data.header.size + asset.icon.offset;
+         entry.is_nacp_valid = true;
+     }
++
++    const auto label = i18n::get("homebrew.name." + nro_normalise_path(path.s), "");
++    entry.display_name = label.empty() ? nacp.lang.name : label + " (" + nacp.lang.name + ")";
++    entry.app_category = category::ForPath(path.s);
+ 
+     R_SUCCEED();
+ }
+--- a/sphaira/source/i18n.cpp
++++ b/sphaira/source/i18n.cpp
+@@ -152,6 +152,12 @@
+     g_word_order = DetectWordOrder(lang_name);
+     g_language_code = lang_name;
+ 
++    if (lang_name == "zh-Hans") {
++        g_tr_cache = {
++#include "bilingual_zh.inc"
++        };
++    }
++
+     const fs::FsPath sdmc_path = "/config/sphaira/i18n/" + lang_name + ".json";
+     const fs::FsPath romfs_path = "romfs:/i18n/" + lang_name + ".json";
+     fs::FsPath path = sdmc_path;
+--- a/sphaira/source/ui/menus/homebrew.cpp
++++ b/sphaira/source/ui/menus/homebrew.cpp
+@@ -187,9 +187,13 @@
+ 
+ Menu::Menu(u32 flags) : grid::Menu{"Homebrew"_i18n, flags} {
+     g_menu = this;
++    if (m_category.Get() != category::NormalizeFilter(m_category.Get())) {
++        m_category.Set(category::NormalizeFilter(m_category.Get()));
++    }
+ 
+     this->SetActions(
+         std::make_pair(Button::A, Action{"Launch"_i18n, [this](){
++            if (m_entries_current.empty()) return;
+             const auto rc = App::CanSetCpuCores()
+                 ? nro_launch(GetEntry().path, {}, GetEntry().hbini.core_mode)
+                 : nro_launch(GetEntry().path);
+@@ -237,6 +241,13 @@
+ 
+ void Menu::Draw(NVGcontext* vg, Theme* theme) {
+     MenuBase::Draw(vg, theme);
++
++    if (m_entries_current.empty()) {
++        gfx::drawTextArgs(vg, SCREEN_WIDTH / 2.f, SCREEN_HEIGHT / 2.f, 26.f,
++            NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE, theme->GetColour(ThemeEntryID_TEXT_INFO),
++            "%s", "No installed apps in this category"_i18n.c_str());
++        return;
++    }
+ 
+     // max images per frame, in order to not hit io / gpu too hard.
+     const int image_load_max = 2;
+@@ -277,11 +288,9 @@
+             has_star = e.has_star.value();
+         }
+ 
+-        std::string name;
++        std::string name = e.GetDisplayName();
+         if (has_star) {
+-            name = std::string("\u2605 ") + e.GetName();
+-        } else {
+-            name = e.GetName();
++            name = std::string("\u2605 ") + name;
+         }
+ 
+         const auto selected = pos == m_index;
+@@ -304,7 +313,7 @@
+         m_list->SetYoff(0);
+         RemoveAction(Button::R3);
+         SetTitleSubHeading("");
+-        SetSubHeading("0 / 0");
++        SetSubHeading(i18n::get(category::Label(category::NormalizeFilter(m_category.Get()))) + " | 0 / 0");
+         return;
+     }
+ 
+@@ -318,13 +327,13 @@
+         if (fs::FsNativeSd().FileExists(star_path)) {
+             SetAction(Button::R3, Action{"Unstar"_i18n, [this](){
+                 fs::FsNativeSd().DeleteFile(GenerateStarPath(GetEntry().path));
+-                App::Notify(i18n::Reorder("Unstarred ", GetEntry().GetName()));
++                App::Notify(i18n::Reorder("Unstarred ", GetEntry().GetDisplayName()));
+                 SortAndFindLastFile();
+             }});
+         } else {
+             SetAction(Button::R3, Action{"Star"_i18n, [this](){
+                 fs::FsNativeSd().CreateFile(GenerateStarPath(GetEntry().path));
+-                App::Notify(i18n::Reorder("Starred ", GetEntry().GetName()));
++                App::Notify(i18n::Reorder("Starred ", GetEntry().GetDisplayName()));
+                 SortAndFindLastFile();
+             }});
+         }
+@@ -338,7 +347,8 @@
+     // log_write("name: %s hbini.ts: %lu file.ts: %lu smaller: %s\n", e.GetName(), e.hbini.timestamp, e.timestamp.modified, e.hbini.timestamp < e.timestamp.modified ? "true" : "false");
+ 
+     SetTitleSubHeading(GetEntry().path);
+-    this->SetSubHeading(std::to_string(m_index + 1) + " / " + std::to_string(m_entries_current.size()));
++    this->SetSubHeading(i18n::get(category::Label(category::NormalizeFilter(m_category.Get()))) + " | "
++        + std::to_string(m_index + 1) + " / " + std::to_string(m_entries_current.size()));
+ }
+ 
+ void Menu::InstallHomebrew() {
+@@ -540,11 +550,14 @@
+         std::unreachable();
+     };
+ 
+-    if (m_show_hidden.Get()) {
+-        m_entries_current = m_entries_index[Filter_All];
+-    } else {
+-        m_entries_current = m_entries_index[Filter_HideHidden];
+-    }
++    const auto& visible = m_entries_index[m_show_hidden.Get() ? Filter_All : Filter_HideHidden];
++    m_filtered_entries.clear();
++    for (const auto index : visible) {
++        if (category::Matches(m_category.Get(), m_entries[index].app_category)) {
++            m_filtered_entries.push_back(index);
++        }
++    }
++    m_entries_current = m_filtered_entries;
+ 
+     std::ranges::sort(m_entries_current, sorter);
+ }
+@@ -596,6 +609,7 @@
+ 
+     m_entries.clear();
+     m_entries_current = {};
++    m_filtered_entries.clear();
+     for (auto& e : m_entries_index) {
+         e.clear();
+     }
+@@ -663,6 +677,18 @@
+ void Menu::DisplayOptions() {
+     auto options = std::make_unique<Sidebar>("Homebrew Options"_i18n, Sidebar::Side::RIGHT);
+     ON_SCOPE_EXIT(App::Push(std::move(options)));
++
++    SidebarEntryArray::Items category_items;
++    for (const auto type : category::Filters) {
++        const auto count = std::ranges::count_if(m_entries, [this, type](const auto& entry) {
++            return (m_show_hidden.Get() || !entry.hbini.hidden) && category::Matches(type, entry.app_category);
++        });
++        category_items.push_back(i18n::get(category::Label(type)) + " (" + std::to_string(count) + ")");
++    }
++    options->Add<SidebarEntryArray>("Category"_i18n, category_items, [this](s64& index_out) {
++        m_category.Set(category::Filters[index_out]);
++        SortAndFindLastFile();
++    }, static_cast<s64>(category::FilterIndex(m_category.Get())));
+ 
+     options->Add<SidebarEntryCallback>("Sort By"_i18n, [this](){
+         auto options = std::make_unique<Sidebar>("Sort Options"_i18n, Sidebar::Side::RIGHT);
+--- a/sphaira/source/ui/menus/appstore.cpp
++++ b/sphaira/source/ui/menus/appstore.cpp
+@@ -68,11 +68,13 @@
+     "All",
+     "Games",
+     "Emulators",
+-    "Tools",
++    "System Tools",
+     "Advanced",
+     "Themes",
+     "Legacy",
+-    "Misc",
++    "Other",
++    "Game Tools",
++    "Media & Network",
+ };
+ 
+ constexpr const char* SORT_STR[] = {
+@@ -908,7 +910,7 @@
+     text_start_y += text_inc_y;
+     gfx::drawTextArgs(vg, text_start_x, text_start_y, font_size, NVG_ALIGN_LEFT | NVG_ALIGN_TOP, theme->GetColour(ThemeEntryID_TEXT), "updated: %s"_i18n.c_str(), m_entry.updated.c_str());
+     text_start_y += text_inc_y;
+-    gfx::drawTextArgs(vg, text_start_x, text_start_y, font_size, NVG_ALIGN_LEFT | NVG_ALIGN_TOP, theme->GetColour(ThemeEntryID_TEXT), "category: %s"_i18n.c_str(), i18n::get(m_entry.category).c_str());
++    gfx::drawTextArgs(vg, text_start_x, text_start_y, font_size, NVG_ALIGN_LEFT | NVG_ALIGN_TOP, theme->GetColour(ThemeEntryID_TEXT), "category: %s"_i18n.c_str(), i18n::get(category::Label(m_entry.app_category)).c_str());
+     text_start_y += text_inc_y;
+     gfx::drawTextArgs(vg, text_start_x, text_start_y, font_size, NVG_ALIGN_LEFT | NVG_ALIGN_TOP, theme->GetColour(ThemeEntryID_TEXT), "extracted: %s"_i18n.c_str(), utils::formatSizeStorage(m_entry.extracted).c_str());
+     text_start_y += text_inc_y;
+@@ -1051,7 +1053,7 @@
+     fs.CreateDirectoryRecursively(CACHE_PATH);
+     fs.CreateDirectoryRecursively("/config/sphaira");
+     LoadStoreSources();
+-    if (m_filter.Get() < 0 || m_filter.Get() >= Filter_MAX) m_filter.Set(Filter_All);
++    if (m_filter.Get() != category::NormalizeFilter(m_filter.Get())) m_filter.Set(category::NormalizeFilter(m_filter.Get()));
+     if (m_sort.Get() < 0 || m_sort.Get() > SortType_Alphabetical) m_sort.Set(SortType_Updated);
+     if (m_order.Get() < 0 || m_order.Get() > OrderType_Ascending) m_order.Set(OrderType_Descending);
+     if (m_layout.Get() < 0 || m_layout.Get() > LayoutType::LayoutType_GridDetail) m_layout.Set(LayoutType::LayoutType_GridDetail);
+@@ -1098,14 +1100,10 @@
+             ON_SCOPE_EXIT(App::Push(std::move(options)));
+ 
+             SidebarEntryArray::Items filter_items;
+-            filter_items.push_back("All"_i18n);
+-            filter_items.push_back("Games"_i18n);
+-            filter_items.push_back("Emulators"_i18n);
+-            filter_items.push_back("Tools"_i18n);
+-            filter_items.push_back("Advanced"_i18n);
+-            filter_items.push_back("Themes"_i18n);
+-            filter_items.push_back("Legacy"_i18n);
+-            filter_items.push_back("Misc"_i18n);
++            for (const auto type : category::Filters) {
++                filter_items.push_back(i18n::get(category::Label(type)) + " ("
++                    + std::to_string(m_entries_index[type].size()) + ")");
++            }
+ 
+             SidebarEntryArray::Items sort_items;
+             sort_items.push_back("Updated"_i18n);
+@@ -1132,10 +1130,10 @@
+                 }, true);
+             }
+ 
+-            options->Add<SidebarEntryArray>("Filter"_i18n, filter_items, [this](s64& index_out){
+-                m_filter.Set(index_out);
++            options->Add<SidebarEntryArray>("Category"_i18n, filter_items, [this](s64& index_out){
++                m_filter.Set(category::Filters[index_out]);
+                 SetFilter();
+-            }, m_filter.Get());
++            }, static_cast<s64>(category::FilterIndex(m_filter.Get())));
+ 
+             options->Add<SidebarEntryArray>("Sort"_i18n, sort_items, [this](s64& index_out){
+                 m_sort.Set(index_out);
+@@ -1574,11 +1572,24 @@
+     for (auto& entry : m_entries) {
+         entry.store_base = store_base;
+         entry.store_id = store_id;
++        entry.app_category = category::ForPackage(
++            store_base == OFFICIAL_STORE_URL ? std::string_view{entry.name} : std::string_view{}, entry.category);
+         if (entry.title.empty()) {
+             entry.title = entry.name;
+         }
+         if (entry.author.empty()) {
+             entry.author = "Unknown"_i18n;
++        }
++        if (store_base == OFFICIAL_STORE_URL) {
++            const auto label = i18n::get("catalog.name." + entry.name, "");
++            if (!label.empty()) {
++                entry.title = label + " (" + entry.title + ")";
++            }
++            const auto description = i18n::get("catalog.description." + entry.name, "");
++            if (!description.empty()) {
++                entry.description = description + " | " + entry.description;
++                entry.details = description + "\n\n" + entry.details;
++            }
+         }
+     }
+ 
+@@ -1599,21 +1610,7 @@
+ 
+         m_entries_index[Filter_All].push_back(i);
+ 
+-        if (e.category == std::string_view{"game"}) {
+-            m_entries_index[Filter_Games].push_back(i);
+-        } else if (e.category == std::string_view{"emu"}) {
+-            m_entries_index[Filter_Emulators].push_back(i);
+-        } else if (e.category == std::string_view{"tool"}) {
+-            m_entries_index[Filter_Tools].push_back(i);
+-        } else if (e.category == std::string_view{"advanced"}) {
+-            m_entries_index[Filter_Advanced].push_back(i);
+-        } else if (e.category == std::string_view{"theme"}) {
+-            m_entries_index[Filter_Themes].push_back(i);
+-        } else if (e.category == std::string_view{"legacy"}) {
+-            m_entries_index[Filter_Legacy].push_back(i);
+-        } else {
+-            m_entries_index[Filter_Misc].push_back(i);
+-        }
++        m_entries_index[e.app_category].push_back(i);
+ 
+         unsigned day{}, month{}, year{};
+         if (std::sscanf(e.updated.c_str(), "%u/%u/%u", &day, &month, &year) == 3) {
+@@ -1782,7 +1779,7 @@
+     m_is_search = false;
+     m_is_author = false;
+ 
+-    const auto filter = std::clamp<long>(m_filter.Get(), Filter_All, Filter_MAX - 1);
++    const auto filter = category::NormalizeFilter(m_filter.Get());
+     m_entries_current = m_entries_index[filter];
+     SetIndex(0);
+     Sort();
+--- a/sphaira/CMakeLists.txt
++++ b/sphaira/CMakeLists.txt
+@@ -35,7 +35,7 @@
+ # it also adds 230k to binary size, and i don't think anyone will use it.
+ option(ENABLE_DEVOPTAB_SFTP "" OFF)
+ 
+-set(sphaira_VERSION 1.0.7)
++set(sphaira_VERSION 1.0.8)
+ 
+ project(sphaira
+     VERSION ${sphaira_VERSION}
+@@ -133,6 +133,7 @@
+     source/web.cpp
+     source/hasher.cpp
+     source/i18n.cpp
++    source/app_category.cpp
+     source/threaded_file_transfer.cpp
+     source/title_info.cpp
+     source/minizip_helper.cpp
+--- a/sphaira/include/ui/menus/homebrew.hpp
++++ b/sphaira/include/ui/menus/homebrew.hpp
+@@ -84,6 +84,7 @@
+ 
+     std::vector<NroEntry> m_entries{};
+     std::vector<u32> m_entries_index[Filter_MAX]{};
++    std::vector<u32> m_filtered_entries{};
+     std::span<u32> m_entries_current{};
+ 
+     s64 m_index{}; // where i am in the array
+@@ -94,6 +95,7 @@
+     option::OptionLong m_order{INI_SECTION, "order", OrderType::OrderType_Descending};
+     option::OptionLong m_layout{INI_SECTION, "layout", LayoutType::LayoutType_GridDetail};
+     option::OptionBool m_show_hidden{INI_SECTION, "show_hidden", false};
++    option::OptionLong m_category{INI_SECTION, "category", category::All};
+ };
+ 
+ } // namespace sphaira::ui::menu::homebrew
+--- a/sphaira/include/ui/menus/appstore.hpp
++++ b/sphaira/include/ui/menus/appstore.hpp
+@@ -6,6 +6,7 @@
+ #include "ui/list.hpp"
+ #include "fs.hpp"
+ #include "option.hpp"
++#include "app_category.hpp"
+ #include <span>
+ 
+ namespace sphaira::ui::menu::appstore {
+@@ -48,6 +49,7 @@
+ 
+ struct Entry {
+     std::string category{}; // todo: lable
++    sphaira::category::Type app_category{sphaira::category::Other};
+     std::string binary{}; // optional, only valid for .nro
+     std::string updated{}; // date of update
+     std::string name{};
+@@ -142,6 +144,8 @@
+     Filter_Themes,
+     Filter_Legacy,
+     Filter_Misc,
++    Filter_GameTools,
++    Filter_MediaNetwork,
+     Filter_MAX,
+ };
+ 
+--- /dev/null
++++ b/sphaira/include/app_category.hpp
+@@ -0,0 +1,54 @@
++#pragma once
++
++#include <array>
++#include <cstddef>
++#include <string_view>
++
++namespace sphaira::category {
++
++// Preserve existing store filter IDs so saved game/emulator filters keep their meaning.
++enum Type : long {
++    All = 0, Games = 1, Emulators = 2, SystemTools = 3,
++    Other = 7, GameTools = 8, MediaNetwork = 9,
++};
++
++inline constexpr std::array Filters{All, Games, GameTools, Emulators, SystemTools, MediaNetwork, Other};
++
++constexpr auto NormalizeFilter(long value) -> Type {
++    if (value == 4 || value == 5) return SystemTools;
++    if (value == 6) return Other;
++    for (const auto type : Filters) {
++        if (value == type) return type;
++    }
++    return All;
++}
++
++constexpr auto FilterIndex(long value) -> std::size_t {
++    const auto type = NormalizeFilter(value);
++    for (std::size_t i = 0; i < Filters.size(); i++) {
++        if (Filters[i] == type) return i;
++    }
++    return 0;
++}
++
++constexpr auto Matches(long filter, Type type) -> bool {
++    return NormalizeFilter(filter) == All || NormalizeFilter(filter) == type;
++}
++
++constexpr auto Label(Type type) -> const char* {
++    switch (type) {
++        case All: return "All";
++        case Games: return "Games";
++        case GameTools: return "Game Tools";
++        case Emulators: return "Emulators";
++        case SystemTools: return "System Tools";
++        case MediaNetwork: return "Media & Network";
++        case Other: return "Other";
++    }
++    return "Other";
++}
++
++auto ForPackage(std::string_view id, std::string_view original_category) -> Type;
++auto ForPath(std::string_view path) -> Type;
++
++} // namespace sphaira::category
+--- /dev/null
++++ b/sphaira/source/app_category.cpp
+@@ -0,0 +1,33 @@
++#include "app_category.hpp"
++#include <unordered_map>
++
++namespace sphaira::category {
++namespace {
++
++const std::unordered_map<std::string_view, Type> categories{
++#include "app_categories.inc"
++};
++
++} // namespace
++
++auto ForPackage(std::string_view id, std::string_view original_category) -> Type {
++    if (const auto it = categories.find(id); it != categories.end()) {
++        return it->second;
++    }
++    if (original_category == "game") return Games;
++    if (original_category == "emu") return Emulators;
++    if (original_category == "tool" || original_category == "advanced" || original_category == "theme") {
++        return SystemTools;
++    }
++    return Other;
++}
++
++auto ForPath(std::string_view path) -> Type {
++    if (path.starts_with("sdmc:")) path.remove_prefix(5);
++    if (const auto it = categories.find(path); it != categories.end()) {
++        return it->second;
++    }
++    return Other;
++}
++
++} // namespace sphaira::category

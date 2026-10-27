@@ -1,0 +1,40 @@
+name: Build bilingual Sphaira
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    container: devkitpro/devkita64:latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install build utilities
+        run: |
+          sudo -n apt-get update
+          sudo -n apt-get install -y texinfo cmake zip python3 g++
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Build and test
+        run: bash build.sh
+      - name: Save draft release
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const tag = `bilingual-${context.runId}-${process.env.GITHUB_RUN_ATTEMPT}`;
+            const {data: release} = await github.rest.repos.createRelease({
+              ...context.repo, tag_name: tag, target_commitish: context.sha,
+              name: tag, draft: true, prerelease: true,
+              body: 'Sphaira 1.0.8 中英分类预览版。请先核对附件与对应源码，并完成真机验证后再公开发布。\n\n定制补丁、译文与构建整理由 Codex 开发。上游 Sphaira 及依赖版权归原作者，可遵循项目许可自行 Fork 和继续开发。'
+            });
+            for (const name of ['sphaira-bilingual-1.0.8.zip', 'sphaira-bilingual-source.zip', 'SHA256SUMS.txt']) {
+              await github.rest.repos.uploadReleaseAsset({
+                ...context.repo, release_id: release.id, name,
+                data: fs.readFileSync(`dist/${name}`)
+              });
+            }
